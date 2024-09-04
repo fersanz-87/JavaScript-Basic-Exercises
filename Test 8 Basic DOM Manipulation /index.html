@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            transition: background-color 0.5s;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to my Webpage!</h1>
+    <p id="paragraph">This is some placeholder text.</p>
+    <button onclick="changeText()">Change Text</button>
+    <button onclick="changeBackgroundColor()">Change Background Color</button>
+
+    <script>
+        function changeText() {
+            document.getElementById('paragraph').textContent = "You clicked the button!";
+        }
+
+        function changeBackgroundColor() {
+            const randomColor = Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = "#" + randomColor;
+        }
+    </script>
+</body>
+</html  
